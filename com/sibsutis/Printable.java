@@ -1,5 +1,5 @@
 package com.sibsutis;
 
 public interface Printable {
-    String sprint();
+    public String print();
 }
