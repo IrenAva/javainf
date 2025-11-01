@@ -16,4 +16,20 @@ public class PersonalComputer extends Device {
     public String print() {
         return "";
     }
+    public boolean equals(PersonalComputer instance)
+    {
+        if (this.getID() == instance.getID() && 
+            this.getPrice() == instance.getPrice() &&
+            this.getIP() == instance.getIP())
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public int hashCode()
+    {
+        return this.getID() + this.getPrice() + (this.getIP().hashCode() * 31);
+    }
 }
